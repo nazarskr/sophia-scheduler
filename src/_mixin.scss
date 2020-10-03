@@ -1,0 +1,29 @@
+@import "./_variables.scss";
+
+@mixin flexRowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexRowBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flexRowAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexColumnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

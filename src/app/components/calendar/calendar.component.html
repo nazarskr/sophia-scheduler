@@ -1,1 +1,34 @@
-<p>calendar works!</p>
+<div id="calendar">
+  <div class="calendar-navigation">
+    <div class="month-button">
+      <i class="material-icons change-date" (click)="minusMonth()"
+      >keyboard_arrow_left</i
+      >
+      <span class="current-month">{{ currentMonth.format("MM, YYYY") }}</span>
+      <i class="material-icons">date_range</i>
+      <i class="material-icons change-date" (click)="plusMonth()"
+      >keyboard_arrow_right</i
+      >
+    </div>
+  </div>
+  <div class="calendar-body">
+    <div
+      class="calendar-week"
+      *ngFor="let dayWeek of weekDays"
+      [ngClass]="dayWeek === 'Sun' ? 'red-text' : ''"
+    >
+      {{ dayWeek }}
+    </div>
+    <div
+      class="calendar-cell"
+      [ngClass]="
+      day.month() !== currentMonth.month() ? 'non-active-cell' :
+      (day.format('dddd') === 'Sunday' ? 'sunday' : 'active-cell modal-trigger')"
+      data-target="day-modal"
+      *ngFor="let day of monthDays"
+      (click)="(day.month() === currentMonth.month() && day.isoWeekday() !== 7) ? openModal(day) : null"
+    >
+      {{ day.format("DD") }}
+    </div>
+  </div>
+</div>
