@@ -1,0 +1,18 @@
+nav {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 60px;
+
+    a {
+      line-height: 60px;
+    }
+  }
+
+  .link-active {
+    text-transform: uppercase;
+  }
+}

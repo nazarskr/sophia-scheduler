@@ -1,0 +1,11 @@
+@import "../../../_variables.scss";
+
+.footer-container {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-family: $font-shadows;
+  font-size: 30px;
+}
